@@ -1,23 +1,51 @@
 aid: allermi
+
 name: Allermi
-description: 'Allermi is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Allermi is a stub company entry in the API Evangelist catalog, currently lacking detailed public information. The profile is intended for future enrichment as more data becomes available, including official website, product offerings, and API documentation. This placeholder ensures the company is tracked for subsequent discovery and verification processes.'
+
 url: https://raw.githubusercontent.com/api-evangelist/allermi/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
+- Finance
+- Marketplace
+- Private-Equity
+- Investment
 - Company
-apis: []
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
-- type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  - type: Hosts
+    url: hosts/allermi-hosts.yml
+  - type: Vendors
+    url: vendors/allermi-vendors.yml
+  - type: DomainSecurity
+    url: security/allermi-domain-security.yml
+  - type: Website
+    url: https://www.nasdaqprivatemarket.com/
+
+apis: []
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
